@@ -194,4 +194,28 @@ nav { display:none; }
 
 }
 
+.menu-line {
+    right: 0;
+    top: 0;
+    margin: 40px;
+    padding:10px;
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background: var(--clr-dark);
+    margin-bottom: 4px;
+
+}
+
+.menu-link a:hover {
+    color: var(--clr-accent);
+}
+
+@media all and (max-width:480px){
+    .menu-line {
+        display:block;
+        width: 100%;
+    }
+
+}
 
