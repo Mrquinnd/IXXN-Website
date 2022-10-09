@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+
+}
+
+/* Custom properties */
+
+:root {
+    --f-primary: "Space Grotesk", sans-serif;
+    --f-secondary: "Roboto", sans-serif;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #000;
+    --clr-accent: #f7f7f7;
+
+    --clr-bg: rgb(38, 241, 200);
+   
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+
+}
+
+/* Adapted styles for larger displays */
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General Styles */
+
+body {
+    background: var(--clr-bg);
+    color: var(--clr-dark);
+    margin:0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    font-weight: var(--fw-reg);
+
+}
+
+img {
+    display:block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    line-height:1.1;
+    margin: 0;
+}
+
+/* Custom properties super useful for theming */
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+/* Intro */
+.intro { 
+    position:relative;
+    height: 100vh;
+    display: flex;
+}
+
+.section {
+    padding: 5rem;
+    text-align: center;
+}
+
+/*To see layout adjustments without annoying nav menu */
+nav { display:none; }
+
+/* Header */
+
+/* Navigation */
+
+/* Footer */
+
+/* Styling for sections */
+.section__title {
+    margin-bottom: .25em;
+
+}
+
+.section__title--intro {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    margin-bottom: .5em;
+}
+
+/* Always puts section title on its own line */
+.section__title--intro strong {
+    display:block;
+
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    font-family: var(--ff-secondary);
+}
+
