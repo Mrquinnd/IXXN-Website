@@ -18,17 +18,32 @@
     --clr-dark: #000;
     --clr-accent: #f7f7f7;
 
-    --clr-bg: rgb(38, 241, 200);
+    --clr-bg: rgb(210, 210, 210);
    
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
-
-
+    
+    /*Box shadow*/
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25);
 }
 
-/* Adapted styles for larger displays */
+.logo {
+    position:fixed;
+    top:0;
+    margin: 40px;
+    width:100%;
+    z-index:100;
+    height: auto;
+    max-width: 100px;
+}
+
+.hamburger-menu {
+   
+}
+
+/* Adapts styles to larger displays */
 @media (min-width: 800px) {
     :root {
         --fs-h1: 4.5rem;
@@ -37,6 +52,8 @@
         --fs-body: 1.125rem;
     }
 }
+
+
 
 /* General Styles */
 
@@ -56,17 +73,26 @@ img {
     max-width: 100%;
 }
 
+/*Typography*/
 h1,
 h2,
 h3 {
     line-height:1.1;
-    margin: 0;
+    margin: 0 auto;
+    z-index: 1;
+    margin: 40px;
+
 }
 
 /* Custom properties super useful for theming */
 h1 { font-size: var(--fs-h1); }
 h2 { font-size: var(--fs-h2); }
 h3 { font-size: var(--fs-h3); }
+
+h1 { font-family: var(--f-primary); }
+h2 {font-family: var(--f-secondary); }
+h3 {font-family: var(--f-secondary); }
+h4 {font-family: var(--f-secondary); }
 
 /* Intro */
 .intro { 
@@ -75,19 +101,64 @@ h3 { font-size: var(--fs-h3); }
     display: flex;
 }
 
-.section {
-    padding: 5rem;
-    text-align: center;
+@media (min-width: 600px) {
+    .intro {
+        display:grid;
+        grid-template-areas: 
+        "img title"
+        "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
 }
+
+.intro__img {
+    z-index: 2;
+    grid-area: img;
+    margin: 0 0;
+    width: 100%;
+    min-width: 1300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
+    text-align: center;
+    margin: 20px;
+
+}
+
+a,
+p {
+    margin: 0 auto;
+    z-index: 1;
+    margin: 40px;
+}
+
+.social-media,
+.footer {
+    background: var(--clr-accent);
+    padding: 2em;
+    text-align: center;
+    
+
+}
+
 
 /*To see layout adjustments without annoying nav menu */
 nav { display:none; }
 
+
+
 /* Header */
+
 
 /* Navigation */
 
+
 /* Footer */
+
 
 /* Styling for sections */
 .section__title {
@@ -104,17 +175,23 @@ nav { display:none; }
 /* Always puts section title on its own line */
 .section__title--intro strong {
     display:block;
+    align-self: start;
+    min-width:250px;
 
 }
 
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
+    
 }
 
 .section__subtitle--intro,
 .section__subtitle--about {
     background: var(--clr-accent);
     font-family: var(--ff-secondary);
+    padding: 5rem 2em;
+
 }
+
 
