@@ -14,6 +14,7 @@
     }
 </style>
 
+
 <body>
     <script src="three.js"></script>
 
@@ -43,10 +44,13 @@
         var material = new THREE.ShaderMaterial({
   uniforms: {
     color1: {
-      value: new THREE.Color("red")
+      value: new THREE.Color("pink")
     },
     color2: {
       value: new THREE.Color("purple")
+    },
+    color3: {
+      value: new THREE.Color("red")
     }
   },
   vertexShader: `

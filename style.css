@@ -8,7 +8,7 @@
 /* Custom properties */
 
 :root {
-    --f-primary: "Space Grotesk", sans-serif;
+    --f-primary: "Space Grotesk", sans-serif, --fw-bold;
     --f-secondary: "Roboto", sans-serif;
 
     --fw-reg: 300;
@@ -35,7 +35,7 @@ button .hover{
 }
 
 
-.hamburger .line{
+.hamburger .line {
     width: 50px;
     height: 5px;
     background-color: #ecf0f1;
@@ -208,6 +208,7 @@ img {
 h1,
 h2,
 h3 {
+    color:#ecf0f1;
     line-height:1.1;
     margin: 0 auto;
     z-index: 1;
@@ -277,6 +278,7 @@ p {
 }
 
 .about-content {
+    background-color:#2b2b2b;
     padding:100px;
     margin:10px;
 }
