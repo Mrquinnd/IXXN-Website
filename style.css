@@ -230,6 +230,7 @@ a:focus {
 .btn:hover::after,
 
 .logo {
+  scale: 2.8;
     position:fixed;
     top:0;
     margin: 40px;
