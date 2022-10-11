@@ -72,14 +72,15 @@
       gl_FragColor = vec4(mix(color1, color2, vUv.y), 1.0);
     }
   `,
+  
   wireframe: true
 });
         // Create a mesh
-        var cube = new THREE.Mesh( geometry, material );
+        var sphere = new THREE.Mesh( geometry, material );
         // Add the mesh to the scene
         var light = new THREE.PointLight( 0xffdfbb,0x0D00, 1 );
         // Add the light to the scene
-        scene.add( cube );
+        scene.add( sphere );
         // Set the position of the camera
         scene.add( light );
 
@@ -100,12 +101,20 @@
         function animate(){
 
             requestAnimationFrame(animate);
-
-            cube.rotation.x = my/500;
-            cube.rotation.y = mx/500;
+            sphere.rotation.y += 0.005;
+            
+           
 
             renderer.render(scene, camera);
         }
+
+        function animate2(){
+            requestAnimationFrame(animate2);
+            sphere.rotation.x = my/500;
+            sphere.rotation.y = mx/500;
+            renderer.render(scene, camera);
+        }
+
         // Call the render function
         animate();
 
