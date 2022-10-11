@@ -6,8 +6,21 @@
 }
 
 /* Custom properties */
+.a:hover{
+  cursor: pointer;
+}
+
+#name_title {
+
+  z-index: 10;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+}
 
 :root {
+    scroll-behavior: smooth;
+
     --f-primary: "Space Grotesk", sans-serif, --fw-bold;
     --f-secondary: "Roboto", sans-serif;
 
@@ -27,6 +40,21 @@
     
     /*Box shadow*/
     --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25);
+}
+
+button {
+  position: relative;
+  margin: 40px auto auto auto;
+  background-color: black;
+  border: none;
+  color: white;
+
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  z-index: 10;
 }
 
 nav-cointainer{
@@ -49,6 +77,9 @@ button .hover{
     color: #000;
 }
 
+#copyright{
+    color: rgb(207, 207, 207);
+}
 
 
 
@@ -239,6 +270,8 @@ body {
 img {
     display:block;
     max-width: 100%;
+    border:#fff;
+    border-radius: 10px;
 }
 
 /*Typography*/
@@ -281,15 +314,15 @@ h4 {font-family: var(--f-secondary); }
 }
 
 .intro__img {
-    z-index: 2;
-    grid-area: img;
-    margin: 0 0;
-    width: 100%;
-    min-width: 1300px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  z-index:-10;
+  margin: 8% auto 0 auto;
+  text-align:center;
+
+  /* 
+    only include this next rule
+    if you want the first image to be over the second
+  */
+  position: relative
 }
 
 .section {
@@ -298,11 +331,31 @@ h4 {font-family: var(--f-secondary); }
 
 }
 
-a,
-p {
+a{
+    font-family: 'Courier New', Courier, monospace;
     margin: 0 auto;
     z-index: 1;
     margin: 40px;
+    color: var(rgb(171, 160, 255));
+    text-decoration: none;
+}
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+  color: #ecf0f1;
+    margin: 0 auto;
+    z-index: 1;
+    margin: 40px;
+}
+
+#front {
+  display:block;
+  object-fit: cover;
+  z-index:-5;
+  position:relative;
+  top:0;
+  margin:0;
+
 }
 
 .social-media,
@@ -312,6 +365,10 @@ p {
     text-align: center;
     
 
+}
+
+.social-icon{
+  color: #000;
 }
 
 .about-content {
