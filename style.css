@@ -10,9 +10,11 @@
   cursor: pointer;
 }
 
-.title-tag {
+#title-tag {
+  position: absolute;
+  top: 300px;
+  left: 80px;
   z-index: 100px;
-  text-align: center;
 }
 
 .logo {
@@ -68,12 +70,8 @@
 }
 
 
-a:focus { opacity: 50%; }
-a:hover { height:20 }
 
-
-button,
-a {
+button{
   
     border-radius: 0.25em;
     padding: 0.5em 1em;
@@ -100,12 +98,13 @@ button:hover {
 
 
 .nav-list {
-  position: absolute;
-   top: 60px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 1rem 2rem;
+    
 
 }
 
@@ -119,10 +118,23 @@ ul {
     margin: 0;
 }
 
+#home-button {
+  z-index: 1000;
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+}
+
+
 .wrapper {
+  z-index: -50;
   background-image: url("imgs/img3.png"); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
-  height: 500px; /* You must set a specified height */
+  top: -50px;
+  height: 1080px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -142,11 +154,16 @@ ul {
 }
 
 .nav-item a:hover {
-    color: #97bdf5;
+    color: #f597e2;
 }
 
 button .hover{
 
+    background-color: #f7f7f7;
+    color: #000;
+}
+
+button:hover {
     background-color: #f7f7f7;
     color: #000;
 }
