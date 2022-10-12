@@ -121,7 +121,55 @@
                                     <a href="#Home" class="nav-link">Home</a>
                                       <!-- Work -->
                                       <li class="nav-item">
+                                        
+                                        <script>
+                                       gsap.registerPlugin(ScrollTrigger);
+                                        // REVEAL //
+                                        gsap.utils.toArray(".revealUp").forEach(function (elem) {
+                                        ScrollTrigger.create({
+                                            trigger: elem,
+                                            start: "top 80%",
+                                            end: "bottom 20%",
+                                            markers: true,
+                                            onEnter: function () {
+                                            gsap.fromTo(
+                                                elem,
+                                                { y: 100, autoAlpha: 0 },
+                                                {
+                                                duration: 1.25,
+                                                y: 0,
+                                                autoAlpha: 1,
+                                                ease: "back",
+                                                overwrite: "auto"
+                                                }
+                                            );
+                                            },
+                                            onLeave: function () {
+                                            gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+                                            },
+                                            onEnterBack: function () {
+                                            gsap.fromTo(
+                                                elem,
+                                                { y: -100, autoAlpha: 0 },
+                                                {
+                                                duration: 1.25,
+                                                y: 0,
+                                                autoAlpha: 1,
+                                                ease: "back",
+                                                overwrite: "auto"
+                                                }
+                                            );
+                                            },
+                                            onLeaveBack: function () {
+                                            gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+                                            }
+                                        });
+                                        });
+                                        
+                                            </script>
+
                                         <a href="#work" class="nav-link">Work</a>
+
 
                                         <!-- Awards -->
                                         <li class="nav-item">
@@ -167,7 +215,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="about-content" id="work">
-                                    <h2>WORK</h2>
+                                    <h2 class='animate-character'>WORK</h2>
                                     <p> My latest work depicted below.</p>
                                     
                                     <div class="gallery-Scroll">
@@ -190,7 +238,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="about-content" id="Awards">
-                                    <h2>AWARDS</h2>
+                                    <h2 class='animate-character'>AWARDS</h2>
                                     <p> Here are my achievements and awards.</p>
                                     <img src="imgs/Awards.png" alt="Quinn Dacre" width="1000px" height="1000px" id="clients">
 
@@ -210,7 +258,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="about-content">
-                                    <h2>CLIENTS</h2>
+                                    <h2 class='animate-character'>CLIENTS</h2>
                                         <p> Below are my clients.
                                         
                                          </p>
@@ -234,7 +282,7 @@
                                 <div class="about-content">
                                     
                                     <img src="imgs/Profile.png" alt="Quinn Dacre" class="img" id="About">
-                                    <h2>ABOUT ME</h2>
+                                    <h2 class='animate-character'>ABOUT ME</h2>
 
                                     <p> I am a freelance designer/animator from Auckland, New Zealand.
                                         I produce engaging creative motion graphics, video and 
