@@ -43,17 +43,24 @@
 }
 
 .name_title {
-  
+  z-index: 100000;
   display: block;
-  margin: 0 auto;
+
   text-align: left;
   font-size: 3rem;
   font-weight: 600;
   color: rgb(255, 255, 255);
 }
 
+#showreel {
+  position: absolute;
+  top: 300px;
+  left: 80px;
+  z-index: -10;
+}
+
 .name_title2 {
-    
+    z-index: 100000;
     display: block;
     margin: 0 auto;
     text-align: left;

@@ -6,7 +6,6 @@
     <!--Ensures all responsive design works correctly on different displays-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="app.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -32,10 +31,9 @@
 
 
     <container id="bg-container">
-        
+
         <container id="title-tag">
-            <h1 class="name_title">QUINN DACRE</h1>
-           
+            <h1 class="name_title2">QUINN DACRE</h1>
                    <h4 class="name_title2">Interaction Designer/CG Artist</h4>
                    <button onclick="sendEmail();" id="Home-button"><strong>CONTACT</strong></button>
                </container>
@@ -62,39 +60,9 @@
 
 
                     <img class="logo" src="imgs/mo.gif" alt="logo" id="logo-id">
-                    <script> 
-                        var header = document.getElementById('logo-id');
-                    
-                            function fadeOutOnScroll(element) {
-                                if (!element) {
-                                    return;
-                                }
-                                
-                                var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
-                                var elementHeight = element.offsetHeight;
-                                var scrollTop = document.documentElement.scrollTop;
-                                
-                                var opacity = 1;
-                                
-                                if (scrollTop > distanceToTop) {
-                                    opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
-                                }
-                                
-                                if (opacity >= 0) {
-                                    element.style.opacity = opacity;
-                                }
-                            }
-                            
-                            function scrollHandler() {
-                                fadeOutOnScroll(header);
-                            }
-                            
-                            window.addEventListener('scroll', scrollHandler);
-                            
-                        </script>
+                
                       <!--three.js-->  
                 
-                <script src="3D functionality/">
                     
                 </script>
 

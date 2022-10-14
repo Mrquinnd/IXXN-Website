@@ -44,10 +44,10 @@
         var material = new THREE.ShaderMaterial({
   uniforms: {
     color1: {
-      value: new THREE.Color("pink")
+      value: new THREE.Color("black")
     },
     color2: {
-      value: new THREE.Color("purple")
+      value: new THREE.Color("white")
     },
     color3: {
       value: new THREE.Color("red")
@@ -101,7 +101,7 @@
         function animate(){
 
             requestAnimationFrame(animate);
-            sphere.rotation.y += 0.005;
+            sphere.rotation.z += 0.005;
             
            
 
@@ -117,6 +117,8 @@
 
         // Call the render function
         animate();
+        animate2();
+
 
     </script>
 
