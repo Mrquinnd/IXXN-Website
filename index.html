@@ -37,7 +37,7 @@
             <h1 class="name_title">QUINN DACRE</h1>
            
                    <h4 class="name_title2">Interaction Designer/CG Artist</h4>
-                   <button id="Home-button"><strong>CONTACT</strong></button>
+                   <button onclick="sendEmail();" id="Home-button"><strong>CONTACT</strong></button>
                </container>
 
         
@@ -182,7 +182,7 @@
 
                                         <!-- Contact -->
                                         <li class="nav-item">
-                                            <a href="#Contact" class="nav-link">Contact</a>
+                                            <a href="#Contac" class="nav-link">Contact</a>
 
                                           
                             
@@ -216,11 +216,25 @@
                             <div class="col-md-6">
                                 <div class="about-content" id="work">
                                     <h2 class='animate-character'>WORK</h2>
-                                    <p> My latest work depicted below.</p>
+                                    <img src="imgs/work.png" alt="line" class="line" id="clients">
+                                    <script>
+                                    function myFunc(){
+                                        window.open("gallery.html");
+                                    }
+                                    </script>
+                                    <button onclick="myFunc()" id="work"><strong>GALLERY</strong></button>
+
+
                                     
                                     <div class="gallery-Scroll">
-                                        <img src="imgs/work.png" alt="1" width="3000" height="3000" id="workflow">
-                                    </div>
+                                        <div class="grid-container">
+                                            <div class="Giltrap-Audi"></div>
+                                            <div class="Kanine"></div>
+                                            <div class="Health-Care-Plus"></div>
+                                            <div class="Netsky"></div>
+                                            <div class="DALI-DAO"></div>
+                                            <div class="Vince-Harder"></div>
+                                          </div>                                    </div>
 
                                 </div>
 
@@ -284,12 +298,17 @@
                                     <img src="imgs/Profile.png" alt="Quinn Dacre" class="img" id="About">
                                     <h2 class='animate-character'>ABOUT ME</h2>
 
+                                    <script>
+                                        function sendEmail() 
+                                        {
+                                            window.location = "mailto:q.dacre@gmail.com";
+                                        }
+                                        </script>
+
                                     <p> I am a freelance designer/animator from Auckland, New Zealand.
                                         I produce engaging creative motion graphics, video and 
                                         photographic content for brands.
-
-                                        <button class="btn"><strong>CONTACT</strong></button>
-                                        <a href="mailto:q.dacre@gmail.com" class="btn" id="Contact"></a>
+                                        <button onclick="sendEmail();" class="btn"><strong>CONTACT</strong></button>
                                          </p>
                                          
                                 </div>
@@ -298,7 +317,7 @@
                     </div>
                 </section>
 <!-- Footer -->
-                        <div class="footer">
+                        <div id='Contac' class="footer">
                             <a href="mailto:q.dacre@gmail.com" class="footer-link">q.dacre@gmail.com</a>
                             <p id="copyright">© 2022, Quinn Dacre</p>
 

@@ -7,6 +7,190 @@
 
 
 
+:root {
+    scroll-behavior: smooth;
+    background-color: #2b2b2b;
+
+    --f-primary: "Space Grotesk", sans-serif;
+    --f-secondary: "Roboto", sans-serif;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: rgb(79, 79, 79);
+    --clr-accent: #f7f7f7;
+
+    --clr-bg: rgb(0, 0, 0);
+   
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    
+    /*Box shadow*/
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25);
+}
+
+:root {
+	/* Base font size */
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #fafafa;
+}
+
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+
+
+.heading {
+    font-weight: bold;
+   font-family: "Space Grotesk", sans-serif;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #ffffff;
+
+}
+
+#title{
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: center;
+    padding: 3.5rem 0;
+}
+
+button {
+    
+    margin-top: 100px 100px;
+    padding-right: 10px;
+    display: block;
+    float: left;
+    background: #dcdcdc;
+}
+
+.animate-character
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #e7d618 0%,
+    #ffc422 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+      font-size: 100px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.heading span {
+    font-family: "Space Grotesk", sans-serif;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #ffffff;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
+
+#gallery {
+    line-height:0;
+    -webkit-column-count:5; /* split it into 5 columns */
+    -webkit-column-gap:5px; /* give it a 5px gap between columns */
+    -moz-column-count:5;
+    -moz-column-gap:5px;
+    column-count:5;
+    column-gap:5px;
+ }
+
+ *,
+*::before,
+*::after{
+    box-sizing: border-box;
+
+}
+
+
+
 /* Custom properties */
 .a:hover{
   cursor: pointer;
@@ -363,11 +547,23 @@ img {
 h1,
 h2,
 h3 {
-    color:#ecf0f1;
-    line-height:1.1;
-    margin: 0 auto;
-    z-index: 1;
-    margin: 40px;
+    --f-primary: "Space Grotesk", sans-serif;
+    --f-secondary: "Roboto", sans-serif;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: rgb(255, 255, 255);
+    --clr-accent: #f7f7f7;
+
+    --clr-bg: rgb(0, 0, 0);
+   
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    
 
 }
 
@@ -561,10 +757,3 @@ p {
 
 }
 
-#gallery {
-  text-align: left;
-  margin: 0 left;
-  padding: 0;
-  display: grid;
-
-}
